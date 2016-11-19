@@ -112,11 +112,90 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="TBk-vl-FzM" id="THG-VZ-Pwh"/>
+                        <segue destination="txz-0n-x0i" kind="presentation" identifier="videoVC" id="wwg-Ap-clA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+        <!--VideoVC-->
+        <scene sceneID="8hU-9U-r8C">
+            <objects>
+                <viewController id="txz-0n-x0i" customClass="VideoVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XRX-rM-4z4"/>
+                        <viewControllerLayoutGuide type="bottom" id="HzU-vp-RrW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u6M-cc-y1o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8H-CU-9mD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="8IK-yj-xUT"/>
+                                </constraints>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Android Studio Tutorial for Beginners Android Studio Tutorial for Beginners" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khj-cv-IRl">
+                                <rect key="frame" x="16" y="315" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gbJ-eT-OaD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn how to install Android Studio and then go through this tutorial to build your very first app" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQt-KL-sCs">
+                                <rect key="frame" x="16" y="370" width="343" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="a4q-OV-nkf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnR-Xo-1zH">
+                                <rect key="frame" x="16" y="607" width="343" height="40"/>
+                                <color key="backgroundColor" red="0.92057961225509644" green="0.0" blue="0.24135452508926392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="I4s-oI-vc2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="DONE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="donePressed:" destination="txz-0n-x0i" eventType="touchUpInside" id="59g-1W-Vo9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w8H-CU-9mD" firstAttribute="leading" secondItem="u6M-cc-y1o" secondAttribute="leading" id="3Ea-xj-fXJ"/>
+                            <constraint firstItem="w8H-CU-9mD" firstAttribute="top" secondItem="u6M-cc-y1o" secondAttribute="top" id="8O0-eV-9gk"/>
+                            <constraint firstItem="tQt-KL-sCs" firstAttribute="trailing" secondItem="u6M-cc-y1o" secondAttribute="trailingMargin" id="HG5-AV-Rf8"/>
+                            <constraint firstItem="HzU-vp-RrW" firstAttribute="top" secondItem="cnR-Xo-1zH" secondAttribute="bottom" constant="20" id="NyI-bT-2tC"/>
+                            <constraint firstItem="Khj-cv-IRl" firstAttribute="leading" secondItem="u6M-cc-y1o" secondAttribute="leadingMargin" id="aX3-0J-jLi"/>
+                            <constraint firstAttribute="trailing" secondItem="w8H-CU-9mD" secondAttribute="trailing" id="bZj-Vz-EJr"/>
+                            <constraint firstItem="Khj-cv-IRl" firstAttribute="top" secondItem="w8H-CU-9mD" secondAttribute="bottom" constant="15" id="izX-wA-ZQQ"/>
+                            <constraint firstItem="cnR-Xo-1zH" firstAttribute="leading" secondItem="u6M-cc-y1o" secondAttribute="leadingMargin" id="p3j-wy-RCC"/>
+                            <constraint firstItem="tQt-KL-sCs" firstAttribute="top" secondItem="Khj-cv-IRl" secondAttribute="bottom" constant="15" id="sJx-1B-e2o"/>
+                            <constraint firstItem="Khj-cv-IRl" firstAttribute="trailing" secondItem="u6M-cc-y1o" secondAttribute="trailingMargin" id="uA0-nk-8jr"/>
+                            <constraint firstItem="cnR-Xo-1zH" firstAttribute="trailing" secondItem="u6M-cc-y1o" secondAttribute="trailingMargin" id="uzJ-rf-ne9"/>
+                            <constraint firstItem="tQt-KL-sCs" firstAttribute="leading" secondItem="u6M-cc-y1o" secondAttribute="leadingMargin" id="zpQ-u0-BpQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descLbl" destination="tQt-KL-sCs" id="hMA-fa-J5g"/>
+                        <outlet property="titleLbl" destination="Khj-cv-IRl" id="wr6-tE-cfJ"/>
+                        <outlet property="webView" destination="w8H-CU-9mD" id="CuZ-q2-zFo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQV-Qr-aOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965.60000000000002" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
